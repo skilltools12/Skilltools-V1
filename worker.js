@@ -1935,32 +1935,32 @@ function rgbToHex(r,g,b) {
     .join("")  
     .toUpperCase();  
 }  
-  
-function hexToRgb(hex) {  
-  return {  
-    r: parseInt(hex.substring(1,3),16),  
-    g: parseInt(hex.substring(3,5),16),  
-    b: parseInt(hex.substring(5,7),16)  
-  };  
-}  
-  
+
+function hexToRgb(hex) {
+  return {
+    r: parseInt(hex.substring(1, 3), 16),
+    g: parseInt(hex.substring(3, 5), 16),
+    b: parseInt(hex.substring(5, 7), 16)
+  };
+}
+
 function hexToRgba(hex, alpha) {
   const rgb = hexToRgb(hex);
   return `rgba(${rgb.r},${rgb.g},${rgb.b},${alpha})`;
-  }  
-  
-function mixColor(color1,color2,amount) {  
-  const a = hexToRgb(color1);  
-  const b = hexToRgb(color2);  
-  
-  return `rgb(${  
-    Math.round(a.r+(b.r-a.r)*amount)  
-  },${  
-    Math.round(a.g+(b.g-a.g)*amount)  
-  },${  
-    Math.round(a.b+(b.b-a.b)*amount)  
-  })`;  
-}  
+}
+
+function mixColor(color1, color2, amount) {
+  const a = hexToRgb(color1);
+  const b = hexToRgb(color2);
+
+  return `rgb(${
+    Math.round(a.r + (b.r - a.r) * amount)
+  },${
+    Math.round(a.g + (b.g - a.g) * amount)
+  },${
+    Math.round(a.b + (b.b - a.b) * amount)
+  })`;
+}    
   
 /* =========================================================  
    CATEGORIES  

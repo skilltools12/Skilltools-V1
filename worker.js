@@ -1944,10 +1944,10 @@ function hexToRgb(hex) {
   };  
 }  
   
-function hexToRgba(hex, alpha) {  
-  const rgb = hexToRgb(hex);  
-  return `rgba(${rgb.r},${rgb.g},${rgb.b},${alpha})`;  
-}  
+function hexToRgba(hex, alpha) {
+  const rgb = hexToRgb(hex);
+  return `rgba(${rgb.r},${rgb.g},${rgb.b},${alpha})`;
+  }  
   
 function mixColor(color1,color2,amount) {  
   const a = hexToRgb(color1);  

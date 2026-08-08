@@ -149,13 +149,14 @@ return base64url(new Uint8Array(signature));
 }
 
 function base64url(bytes) {
-let binary = "";
-for (const byte of bytes) binary += String.fromCharCode(byte);
-return btoa(binary)
-  .replace(/\+/g, "-")
-  .replace(/\//g, "_")
-  .replace(/=+$/g, "");
-}
+  let binary = "";
+
+  for (const byte of bytes) {
+    binary += String.fromCharCode(byte);
+  }
+
+  return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
+  }
 
 function constantTimeEqual(a, b) {
 a = String(a);

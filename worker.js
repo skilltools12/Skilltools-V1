@@ -174,10 +174,10 @@ return result === 0;
 }
 
 function b64(value) {
-return btoa(value)
-.replace(/+/g, "-")
-.replace(///g, "_")
-.replace(/=+$/g, "");
+  return btoa(value)
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/g, "");
 }
 
 function getCookie(request, name) {
